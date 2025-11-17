@@ -11,7 +11,7 @@ import re
 import shutil
 import torch
 from pathlib import Path
-from esm.constants import proteinseq_toks
+from .constants import proteinseq_toks
 
 RawMSA = Sequence[Tuple[str, str]]
 
@@ -247,7 +247,15 @@ class Alphabet(object):
         return tokenized_text
 
     def encode(self, text):
-        return [self.tok_to_idx[tok] for tok in self.tokenize(text)]
+    # 原始的 tokenize() 方法对于简单的、逐字符的蛋白质序列来说过于复杂
+    # 并且在遇到不在词汇表中的字符（如 '*' 或 '>') 时会崩溃。
+    # 
+    # 这种新方法更简单、更健壮：
+    # 1. 它直接遍历 'text' 字符串中的每一个 'char'。
+    # 2. 它使用 self.get_idx(char)，这个函数会
+    #    - 返回 'char' 对应的 ID（如果 'char' 是 'A', 'R' 等）
+    #    - 返回 self.unk_idx（<unk> token 的 ID），如果 'char' 是未知的（比如 '>')
+        return [self.get_idx(char) for char in text]
 
 
 class BatchConverter(object):
@@ -491,3 +499,6 @@ class ESMStructuralSplitDataset(torch.utils.data.Dataset):
         with open(pkl_fname, "rb") as f:
             obj = pickle.load(f)
         return obj
+
+
+    
