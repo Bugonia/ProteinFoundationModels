@@ -1,0 +1,78 @@
+W1118 10:51:00.861239 829578 site-packages/torch/distributed/run.py:793] 
+W1118 10:51:00.861239 829578 site-packages/torch/distributed/run.py:793] *****************************************
+W1118 10:51:00.861239 829578 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1118 10:51:00.861239 829578 site-packages/torch/distributed/run.py:793] *****************************************
+--- 1. 开始设置 [DDP 8-GPU 预训练] ---
+使用 8 块 GPU (H100)。
+使用 96 个 CPU 核心用于数据加载。
+--- 2. 加载数据 ---
+正在打开 FASTA 文件: /inspire/ssd/project/advanced-machine-learning-and-deep-learning-applications/zhongxiaoqiu-253108120179/data/uniref50/uniref50.fasta
+成功加载 FASTA。找到 58875981 条序列。
+数据加载器已准备就绪。共 58875981 条序列。
+每 GPU 有效批量大小: 1024 (1024)
+全局有效批量大小: 8192 (8192)
+最大序列长度: 512
+--- 3. 初始化模型 (从头开始) ---
+/inspire/hdd/project/advanced-machine-learning-and-deep-learning-applications/zhongxiaoqiu-253108120179/esm/esm/train_mlm_ddp.py:201: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(CHECKPOINT_PATH, map_location="cpu")
+/inspire/hdd/project/advanced-machine-learning-and-deep-learning-applications/zhongxiaoqiu-253108120179/esm/esm/train_mlm_ddp.py:201: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(CHECKPOINT_PATH, map_location="cpu")
+/inspire/hdd/project/advanced-machine-learning-and-deep-learning-applications/zhongxiaoqiu-253108120179/esm/esm/train_mlm_ddp.py:201: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(CHECKPOINT_PATH, map_location="cpu")
+/inspire/hdd/project/advanced-machine-learning-and-deep-learning-applications/zhongxiaoqiu-253108120179/esm/esm/train_mlm_ddp.py:201: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(CHECKPOINT_PATH, map_location="cpu")
+/inspire/hdd/project/advanced-machine-learning-and-deep-learning-applications/zhongxiaoqiu-253108120179/esm/esm/train_mlm_ddp.py:201: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(CHECKPOINT_PATH, map_location="cpu")
+/inspire/hdd/project/advanced-machine-learning-and-deep-learning-applications/zhongxiaoqiu-253108120179/esm/esm/train_mlm_ddp.py:201: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(CHECKPOINT_PATH, map_location="cpu")
+/inspire/hdd/project/advanced-machine-learning-and-deep-learning-applications/zhongxiaoqiu-253108120179/esm/esm/train_mlm_ddp.py:201: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(CHECKPOINT_PATH, map_location="cpu")
+/inspire/hdd/project/advanced-machine-learning-and-deep-learning-applications/zhongxiaoqiu-253108120179/esm/esm/train_mlm_ddp.py:201: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(CHECKPOINT_PATH, map_location="cpu")
+模型参数量: 148,139,794
+模型、优化器、GradScaler 和调度器已准备就绪。
+--- 4. 开始训练 ---
+
+--- Epoch 1 / 1 ---
+/inspire/hdd/global_user/zhongxiaoqiu-253108120179/.conda/envs/esm_project/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:224: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+/inspire/hdd/global_user/zhongxiaoqiu-253108120179/.conda/envs/esm_project/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:224: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+/inspire/hdd/global_user/zhongxiaoqiu-253108120179/.conda/envs/esm_project/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:224: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+/inspire/hdd/global_user/zhongxiaoqiu-253108120179/.conda/envs/esm_project/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:224: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+/inspire/hdd/global_user/zhongxiaoqiu-253108120179/.conda/envs/esm_project/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:224: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+/inspire/hdd/global_user/zhongxiaoqiu-253108120179/.conda/envs/esm_project/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:224: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+/inspire/hdd/global_user/zhongxiaoqiu-253108120179/.conda/envs/esm_project/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:224: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+/inspire/hdd/global_user/zhongxiaoqiu-253108120179/.conda/envs/esm_project/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:224: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+  Epoch 1, 有效批次 100/7187, MLM 损失: 2.5737
+  Epoch 1, 有效批次 200/7187, MLM 损失: 2.6282
+  Epoch 1, 有效批次 300/7187, MLM 损失: 2.6917
+  Epoch 1, 有效批次 400/7187, MLM 损失: 2.6388
+  Epoch 1, 有效批次 500/7187, MLM 损失: 2.7063
+  Epoch 1, 有效批次 600/7187, MLM 损失: 2.6809
+  Epoch 1, 有效批次 700/7187, MLM 损失: 2.7180
+  Epoch 1, 有效批次 800/7187, MLM 损失: 2.7627
+  Epoch 1, 有效批次 900/7187, MLM 损失: 2.6398
+  Epoch 1, 有效批次 1000/7187, MLM 损失: 2.7042
+正在保存临时检查点...
+  Epoch 1, 有效批次 1100/7187, MLM 损失: 2.7139
+  Epoch 1, 有效批次 1200/7187, MLM 损失: 2.7210
+  Epoch 1, 有效批次 1300/7187, MLM 损失: 2.7494
+  Epoch 1, 有效批次 1400/7187, MLM 损失: 2.7544
+  Epoch 1, 有效批次 1500/7187, MLM 损失: 2.6388
+  Epoch 1, 有效批次 1600/7187, MLM 损失: 2.7604
+  Epoch 1, 有效批次 1700/7187, MLM 损失: 2.7604
+  Epoch 1, 有效批次 1800/7187, MLM 损失: 2.6380
+  Epoch 1, 有效批次 1900/7187, MLM 损失: 2.6417
+  Epoch 1, 有效批次 2000/7187, MLM 损失: 2.7057
+正在保存临时检查点...
+  Epoch 1, 有效批次 2100/7187, MLM 损失: 2.6701
+  Epoch 1, 有效批次 2200/7187, MLM 损失: 2.7229
+  Epoch 1, 有效批次 2300/7187, MLM 损失: 2.6356
+  Epoch 1, 有效批次 2400/7187, MLM 损失: 2.6604
